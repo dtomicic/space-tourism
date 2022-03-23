@@ -4,16 +4,28 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
+
+    &#destination {
+        background-image: url('../img/destination/background-destination-mobile.jpg');
+    }
 }
 
 @media (min-width: $breakTablet) {
     body {
         background-image: url('../img/home/background-home-tablet.jpg');
+
+        &#destination {
+            background-image: url('../img/destination/background-destination-tablet.jpg');
+        }
     }
 }
 
 @media (min-width: $breakDesktop) {
     body {
         background-image: url('../img/home/background-home-desktop.jpg');
+
+        &#destination {
+            background-image: url('../img/destination/background-destination-desktop.jpg');
+        }
     }
 }
