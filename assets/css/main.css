@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("../img/home/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-image: url("../img/home/background-home-desktop.jpg");
+  }
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.navigation__visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.navigation__visibleRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.navigation__visibleRightDesktop {
+  display: none;
+}
+
+.navigation__visibleRightMobile {
+  padding: 2.0625rem 1.5rem;
+}
+
+.navigation__visibleRightMobile.home {
+  display: none;
+}
+
+.navigation__visibleLeft {
+  padding: 1.5rem;
+}
+
+.navigation__visibleLeftImage {
+  width: 2.5rem;
+}
+
+.navigation__visibleMiddle {
+  display: none;
+}
+
+.navigation__invisible {
+  position: absolute;
+  top: -100%;
+  width: 65%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(5.09678rem);
+          backdrop-filter: blur(5.09678rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 2rem;
+  -webkit-transition: ease-in-out .4s;
+  transition: ease-in-out .4s;
+}
+
+.navigation__invisibleClose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2.12188rem;
+}
+
+.navigation__invisibleCloseImg {
+  width: 1.1875rem;
+  height: 1.1875rem;
+}
+
+.navigation__invisibleItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.navigation__invisibleItemsInstance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation__invisibleItemsInstanceLink {
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #FFFFFF;
+  font-size: 1rem;
+  letter-spacing: 0.16875rem;
+}
+
+.navigation__invisibleItemsInstanceLinkLine {
+  display: none;
+  width: 3px;
+  height: 31px;
+  background-color: #FFFFFF;
+}
+
+.navigation__invisibleItemsInstanceLinkLine.active {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navigation__visibleLeft {
+    padding: 1.5rem 2.4375rem;
+  }
+  .navigation__visibleLeftImage {
+    width: 2.5625rem;
+  }
+  .navigation__visibleRightDesktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.3125rem;
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(81.5485px);
+            backdrop-filter: blur(81.5485px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2.4375rem 3rem 0 3rem;
+  }
+  .navigation__visibleRightDesktopItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .navigation__visibleRightDesktopItemLink {
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #FFFFFF;
+    font-size: 0.875rem;
+    letter-spacing: 0.1475rem;
+    padding-bottom: 2.5rem;
+  }
+  .navigation__visibleRightDesktopItemLine {
+    display: none;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 0.1875rem;
+    justify-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .navigation__visibleRightDesktopItemLine.active {
+    display: block;
+  }
+  .navigation__visibleRightMobile {
+    display: none;
+  }
+  .numbers {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navigation {
+    margin-top: 2.5rem;
+  }
+  .navigation__visibleRight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navigation__visibleMiddle {
+    position: relative;
+    left: 50px;
+    display: block;
+    background-color: #FFFFFF;
+    width: 29.5625rem;
+    height: 0.0625rem;
+    z-index: 9999;
+  }
+  .navigation__visibleLeft {
+    padding-left: 3.4375rem;
+  }
+  .navigation__visibleLeftImage {
+    width: 3rem;
+  }
+  .navigation__visibleRightDesktop {
+    padding-right: 10.3125rem;
+    padding-left: 7.6875rem;
+  }
+  .navigation__visibleRightDesktopItem:hover .navigation__visibleRightDesktopItemLine {
+    display: block;
+    opacity: 0.5;
+  }
+  .navigation__visibleRightDesktopItemLink {
+    font-size: 1rem;
+    letter-spacing: 0.16875rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.6875rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .numbers {
+    display: block;
+  }
+}
+
+.openMobileNav {
+  top: 0;
+}
+
+.disableOverflow {
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */
