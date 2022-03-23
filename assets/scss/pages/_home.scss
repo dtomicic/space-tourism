@@ -1,0 +1,151 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: toRem(48);
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        gap: toRem(16);
+        margin-bottom: toRem(81);
+        
+
+        &SubHeader {
+            color: $secondaryColor;
+            font-size: toRem(16);
+            font-family: $subHeaderFont;
+            letter-spacing: toRem(2.7);
+            font-weight: 400;
+        }
+
+        &Header {
+            color: $mainColor;
+            font-family: $headerFont;
+            font-weight: 400;
+            font-size: toRem(80);
+            line-height: toRem(100);
+        }
+
+        &Paragraph {
+            color: $secondaryColor;
+            font-family: $subHeaderFont;
+            font-size: toRem(15);
+            line-height: toRem(25);
+            font-weight: 400;
+            max-width: toRem(337);
+
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $mainColor;
+        width: toRem(150);
+        height: toRem(150);
+        border-radius: 100%;
+
+        &Header {
+            font-family: $headerFont;
+            color: $thirdColor;
+            font-weight: 400;
+            font-size: toRem(20);
+            line-height: toRem(22.92);
+            letter-spacing: toRem(1.25);
+        }
+    }
+}
+
+// Media queries 
+@media(min-width: $breakTablet) {
+    .intro {
+        margin-top: toRem(106);
+
+        &__text {
+            gap: toRem(24);
+            margin-bottom: toRem(156);
+
+            &SubHeader {
+                font-size: toRem(20);
+                line-height: toRem(24);
+                letter-spacing: toRem(3.38);
+            }
+
+            &Header {
+                font-size: toRem(150);
+                line-height: toRem(150);
+            }
+
+            &Paragraph {
+                font-size: toRem(16);
+                line-height: toRem(28);
+            }
+        }
+
+        &__btn {
+            width: toRem(242);
+            height: toRem(242);
+            border-radius: 100%;
+    
+            &Header {
+                font-size: toRem(32);
+                line-height: toRem(36.67);
+                letter-spacing: toRem(2);
+            }
+        }
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .intro {
+        flex-direction: row;
+        margin-top: toRem(251);
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 toRem(165) 0 toRem(165);
+
+        &__text {
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            width: 80%;
+
+            &SubHeader {
+                font-size: toRem(28);
+                line-height: toRem(33.6);
+                letter-spacing: toRem(4.72);
+            }
+
+            &Header {
+                line-height: toRem(171.9);
+            }
+
+            &Paragraph {
+                font-size: toRem(18);
+                line-height: toRem(32);
+                width: 45%;
+                max-width: toRem(393);
+            }
+        }
+
+        &__btn {
+            background-color: $mainColor;
+            width: toRem(274);
+            height: toRem(274);
+            border-radius: 100%;
+            z-index: 999999;
+            transition: ease-in-out 0.6s;
+
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 0 50px rgba(80, 80, 80, 0.5);
+            }
+        }
+    }
+}
