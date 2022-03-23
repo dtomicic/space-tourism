@@ -1,0 +1,19 @@
+body {
+    background-image: url('../img/home/background-home-mobile.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (min-width: $breakTablet) {
+    body {
+        background-image: url('../img/home/background-home-tablet.jpg');
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    body {
+        background-image: url('../img/home/background-home-desktop.jpg');
+    }
+}

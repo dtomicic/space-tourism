@@ -1,0 +1,222 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &__visible {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &Right {
+            display: flex;
+            height: 100%;
+
+            &Desktop {
+                display: none;
+            }
+
+            &Mobile {
+                 padding: toRem(33) toRem(24);
+
+                 &.home {
+                     display: none;
+                 }
+            }
+        }
+
+        &Left {
+            padding: toRem(24);
+
+            &Image {
+                width: toRem(40);
+            }
+        }
+
+        &Middle {
+            display: none;
+        }
+    }
+
+    &__invisible {
+        position: absolute;
+        top: -100%;
+        width: 65%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(toRem(81.5485));
+        display: flex;
+        flex-direction: column;
+        padding-left: toRem(32);
+        transition: ease-in-out .4s;
+
+        &Close {
+            display: flex;
+            justify-content: flex-end;
+            padding: toRem(33.95);
+
+            &Img {
+                width: toRem(19);
+                height: toRem(19);
+            }
+        }
+
+        &Items {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(32);
+
+            &Instance {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &Link {
+                    text-decoration: none;
+                    font-family: $subHeaderFont;
+                    color: $mainColor;
+                    font-size: toRem(16);
+                    letter-spacing: toRem(2.7);
+
+                    &Line {
+                        display: none;
+                        width: 3px;
+                        height: 31px;
+                        background-color: $mainColor;
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Media queries 
+@media (min-width: $breakTablet) {
+    .navigation__visibleLeft {
+        padding: toRem(24) toRem(39);
+
+        &Image {
+            width: toRem(41);
+        }
+    }
+
+    .navigation__visibleRightDesktop {
+        display: flex;
+        gap: toRem(37);
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(81.5485px);
+        justify-content: center;
+        align-items: center;
+        padding: toRem(39) toRem(48) 0 toRem(48);
+
+
+        &Item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            &Link {
+                text-decoration: none;
+                font-family: $subHeaderFont;
+                color: $mainColor;
+                font-size: toRem(14);
+                letter-spacing: toRem(2.36);
+                padding-bottom: toRem(40);
+            }
+
+            &Line {
+                display: none;
+                background-color: $mainColor;
+                width: 100%;
+                height: toRem(3);
+                justify-self: flex-end;
+                align-self: flex-end;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .navigation__visibleRightMobile {
+        display: none;
+    }
+
+    .numbers {
+        display: none;
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .navigation {
+        margin-top: toRem(40); 
+        
+        &__visibleRight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        &__visibleMiddle {
+            position: relative;
+            left: 50px;
+            display: block;
+            background-color: $mainColor;
+            width: toRem(473);
+            height: toRem(1);
+            z-index: 9999;
+        }
+
+        &__visibleLeft {
+            padding-left: toRem(55);
+
+            &Image {
+                width: toRem(48);
+            }
+        }
+
+        &__visibleRightDesktop {
+            padding-right: toRem(165);
+            padding-left: toRem(123);
+
+            &Item:hover {
+                .navigation__visibleRightDesktopItemLine {
+                    display: block;
+                    opacity: 0.5;
+                }
+            }
+
+            &ItemLink {
+                font-size: toRem(16);
+                letter-spacing: toRem(2.7);
+                display: flex;
+                gap: toRem(11);
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .numbers {
+        display: block;
+    }
+}
+
+// JS classes
+.openMobileNav {
+    top: 0;
+}
+
+.disableOverflow {
+    overflow: hidden;
+}
