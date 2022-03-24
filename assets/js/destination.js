@@ -54,7 +54,7 @@ const checkItem = () => {
             LINES[1].classList.add('activeChoice');
             HEADER.innerHTML = `${data.destinations[1].name}`;
             PICTURE.src = data.destinations[1].images.webp;
-            PICTURE.alt = 'Picture of the Moon';
+            PICTURE.alt = 'Picture of the Mars';
             DESC.innerHTML = `${data.destinations[1].description}`;
             DIST.innerHTML = `${data.destinations[1].distance}`;
             TRAVEL.innerHTML = `${data.destinations[1].travel}`;
@@ -63,7 +63,7 @@ const checkItem = () => {
             LINES[2].classList.add('activeChoice');
             HEADER.innerHTML = `${data.destinations[2].name}`;
             PICTURE.src = data.destinations[2].images.webp;
-            PICTURE.alt = 'Picture of the Moon';
+            PICTURE.alt = 'Picture of Europa';
             DESC.innerHTML = `${data.destinations[2].description}`;
             DIST.innerHTML = `${data.destinations[2].distance}`;
             TRAVEL.innerHTML = `${data.destinations[2].travel}`;
@@ -72,7 +72,7 @@ const checkItem = () => {
             LINES[3].classList.add('activeChoice');
             HEADER.innerHTML = `${data.destinations[3].name}`;
             PICTURE.src = data.destinations[3].images.webp;
-            PICTURE.alt = 'Picture of the Moon';
+            PICTURE.alt = 'Picture of the Titan';
             DESC.innerHTML = `${data.destinations[3].description}`;
             DIST.innerHTML = `${data.destinations[3].distance}`;
             TRAVEL.innerHTML = `${data.destinations[3].travel}`;
