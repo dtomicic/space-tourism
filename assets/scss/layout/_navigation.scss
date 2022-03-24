@@ -51,6 +51,7 @@
         flex-direction: column;
         padding-left: toRem(32);
         transition: ease-in-out .4s;
+        z-index: 999999;
 
         &Close {
             display: flex;

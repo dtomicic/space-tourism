@@ -1,0 +1,228 @@
+.crew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: toRem(24);
+
+    &__header {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        &Heading {
+            font-family: $subHeaderFont;
+            font-size: toRem(16);
+            line-height: toRem(19.2);
+            letter-spacing: toRem(2.7);
+            color: $mainColor;
+            font-weight: 400;
+
+            &Accented {
+                font-weight: 700;
+                mix-blend-mode: normal;
+                opacity: 0.25;
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: toRem(32);
+
+        &Picture {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            border-bottom: 2px solid #383B4B;
+            max-width: toRem(338);
+
+            &Item {
+                width: 50%;
+            }
+        }
+
+        &Text {
+            margin-top: toRem(32);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &Selector {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: toRem(16);
+                
+                &Item {
+                    background-color: #FFFFFF;
+                    mix-blend-mode: normal;
+                    opacity: 0.17;
+                    height: toRem(10);
+                    width: toRem(10);
+                    border-radius: 100%;
+                    transition: ease-in-out 0.4s;
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.6;
+                    }
+
+                    &.selectorCurrent {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &Content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: toRem(32);
+
+                &Role {
+                    position: relative;
+                    font-family: $headerFont;
+                    font-weight: 400;
+                    font-size: toRem(16);
+                    line-height: toRem(18);
+                    text-transform: uppercase;
+                    color: $mainColor;
+                    opacity: 0.5;    
+                }
+
+                &Name {
+                    margin-top: toRem(8);
+                    font-family: $headerFont;
+                    font-weight: 400;
+                    font-size: toRem(24);
+                    line-height: toRem(28);
+                    text-transform: uppercase;
+                    color: $mainColor;
+                }
+
+                &Desc {
+                    margin-top: toRem(16);
+                    font-family: $subHeaderFont;
+                    font-weight: 400;
+                    font-size: toRem(15);
+                    line-height: toRem(25);
+                    color: $secondaryColor;
+                    max-width: toRem(338);
+                }
+            }
+        }
+    }
+}
+
+// Media queries
+
+@media (min-width: $breakTablet) {
+    .crew__header {
+        justify-content: flex-start;
+        margin-top: toRem(40);
+        padding-left: toRem(38.5);
+
+        &Heading {
+            font-size: toRem(20);
+            letter-spacing: toRem(3.375);
+            line-height: toRem(24);
+        }
+    }
+
+    .crew__main {
+        flex-direction: column-reverse;
+
+        &Text {
+            flex-direction: column-reverse;
+
+            &ContentRole {
+                font-size: toRem(24);
+                line-height: toRem(27.5);
+            }
+
+            &ContentName {
+                font-size: toRem(40);
+                line-height: toRem(48.54);
+            }
+
+            &ContentDesc {
+                font-size: toRem(16);
+                line-height: toRem(28);
+                max-width: toRem(350);
+            }
+
+            &Selector {
+                margin-top: toRem(40);
+            }
+        }
+
+        &Picture {
+            margin-top: toRem(40);
+            max-width: toRem(692);
+            border-bottom: unset;
+
+            &Item {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .crew__header {
+        padding-left: toRem(166.5);
+    }
+    .crew__main {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        &Picture {
+            width: 50%;
+
+            &Item {
+                width: 70%;
+            }
+        }
+        
+        &Text {
+            width: 50%;
+            align-items: flex-start;
+            padding-left: toRem(166.5);
+
+            &Selector {
+                margin-top: toRem(120);
+
+                &Item {
+                    height: toRem(15);
+                    width: toRem(15);
+                }
+            }
+
+            &Content {
+                align-items: flex-start;
+
+                &Role {
+                    font-size: toRem(32);
+                    line-height: toRem(37);
+                }
+
+                &Name {
+                    font-size: toRem(56);
+                    line-height: toRem(64);
+                }
+
+                &Desc {
+                    text-align: left;
+                    font-size: toRem(18);
+                    line-height: toRem(32);
+                }
+            }
+
+        }
+    }
+}

@@ -8,6 +8,9 @@ body {
     &#destination {
         background-image: url('../img/destination/background-destination-mobile.jpg');
     }
+    &#crew {
+        background-image: url('../img/crew/background-crew-mobile.jpg');
+    }
 }
 
 @media (min-width: $breakTablet) {
@@ -16,6 +19,9 @@ body {
 
         &#destination {
             background-image: url('../img/destination/background-destination-tablet.jpg');
+        }
+        &#crew {
+            background-image: url('../img/crew/background-crew-tablet.jpg');
         }
     }
 }
@@ -26,6 +32,9 @@ body {
 
         &#destination {
             background-image: url('../img/destination/background-destination-desktop.jpg');
+        }
+        &#crew {
+            background-image: url('../img/crew/background-crew-desktop.jpg');
         }
     }
 }
