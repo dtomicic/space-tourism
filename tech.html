@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
         <title>Space Tourism</title>
     </head>
-    <body id="destination">
+    <body id="tech">
         <header>
             <nav class="navigation">
                 <div class="navigation__visible">
@@ -25,7 +25,7 @@
                             </div>
                             <div class="navigation__visibleRightDesktopItem">
                                 <a href="destination.html" class="navigation__visibleRightDesktopItemLink"><span class="numbers"><b>01 </b></span>DESTINATION</a>
-                                <div class="navigation__visibleRightDesktopItemLine active"></div>
+                                <div class="navigation__visibleRightDesktopItemLine"></div>
                             </div>
                             <div class="navigation__visibleRightDesktopItem">
                                 <a href="crew.html" class="navigation__visibleRightDesktopItemLink"><span class="numbers"><b>02 </b></span>CREW</a>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="navigation__visibleRightDesktopItem">
                                 <a href="tech.html" class="navigation__visibleRightDesktopItemLink"><span class="numbers"><b>03 </b></span>TECHNOLOGY</a>
-                                <div class="navigation__visibleRightDesktopItemLine"></div>
+                                <div class="navigation__visibleRightDesktopItemLine active"></div>
                             </div>
                         </div>
 
@@ -55,7 +55,7 @@
                         </div>
                         <div class="navigation__invisibleItemsInstance">
                             <a href="destination.html" class="navigation__invisibleItemsInstanceLink"><b>01</b> DESTINATION</a>
-                            <div class="navigation__invisibleItemsInstanceLinkLine active"></div>
+                            <div class="navigation__invisibleItemsInstanceLinkLine"></div>
                         </div>
                         <div class="navigation__invisibleItemsInstance">
                             <a href="crew.html" class="navigation__invisibleItemsInstanceLink"><b>02</b> CREW</a>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="navigation__invisibleItemsInstance">
                             <a href="tech.html" class="navigation__invisibleItemsInstanceLink"><b>03</b> TECHNOLOGY</a>
-                            <div class="navigation__invisibleItemsInstanceLinkLine"></div>
+                            <div class="navigation__invisibleItemsInstanceLinkLine active"></div>
                         </div>
                     </div>
                 </div>
@@ -71,57 +71,47 @@
         </header>
 
         <main>
-            <section class="destination">
-                <div class="destination__top">
-                    <div class="destination__topHeading">
-                        <h3 class="destination__header"><span class="destination__headerAccent">01</span> PICK YOUR DESTINATION</h3>
-                    </div>   
-
-                    <img class="destination__picture" id="planetPicture">
+            <section class="tech">
+                <div class="tech__header">
+                    <h3 class="tech__headerHeading"><span class="tech__headerHeadingAccented">03</span> SPACE LAUNCH 101</h3>
                 </div>
+                
+                <div class="tech__main">
 
-                <div class="destination__bottom">  
-                    <div class="destination__choice">
-                        <div class="destination__choiceItem currentItem">
-                            <a href="#" class="destination__choiceItemLink"><h3 class="destination__choiceItemLinkHeader">MOON</h3></a>
-                            <div class="destination__choiceItemLine activeChoice"></div>
-                        </div>
-                        <div class="destination__choiceItem">
-                            <a href="#" class="destination__choiceItemLink"><h3 class="destination__choiceItemLinkHeader">MARS</h3></a>
-                            <div class="destination__choiceItemLine"></div>
-                        </div>
-                        <div class="destination__choiceItem">
-                            <a href="#" class="destination__choiceItemLink"><h3 class="destination__choiceItemLinkHeader">EUROPA</h3></a>
-                            <div class="destination__choiceItemLine"></div>
-                        </div>
-                        <div class="destination__choiceItem">
-                            <a href="#" class="destination__choiceItemLink"><h3 class="destination__choiceItemLinkHeader">TITAN</h3></a>
-                            <div class="destination__choiceItemLine"></div>
-                        </div>
+                    <div class="tech__mainPicture">
+                        <img class="tech__mainPictureItemLandscape" id="pictureLandscape">
+                        <img class="tech__mainPictureItemPortrait" id="picturePortrait">
                     </div>
 
-                    <div class="destination__desc">
-                        <h3 class="destination__descHeader" id="planetHeader"></h3>
-                        <p class="destination__descParagraph" id="planetDesc"></p>
-                    </div>
+                    <div class="tech__mainText">
 
-                    <div class="divider"></div>
+                        <div class="tech__mainTextSelector">
+                            <div class="tech__mainTextSelectorItem activeSelector">
+                                <h3 class="tech__mainTextSelectorItemHeader">1</h3>
+                            </div>
+                            <div class="tech__mainTextSelectorItem">
+                                <h3 class="tech__mainTextSelectorItemHeader">2</h3>
+                            </div>
+                            <div class="tech__mainTextSelectorItem">
+                                <h3 class="tech__mainTextSelectorItemHeader">3</h3>
+                            </div>
+                        </div>
 
-                    <div class="destination__info">
-                        <div class="destination__infoItem">
-                            <h3 class="destination__infoItemSubHeader">AVG. DISTANCE</h3>
-                            <h3 class="destination__infoItemHeader" id="planetDistance"></h3>
+
+                        <div class="tech__mainTextContent">
+
+                            <h3 class="tech__mainTextContentSubHeader">THE TERMINOLOGY...</h3>
+                            <h3 class="tech__mainTextContentHeader" id="techName"></h3>
+                            <p class="tech__mainTextContentParagraph" id="techBio">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+
                         </div>
-                        <div class="destination__infoItem">
-                            <h3 class="destination__infoItemSubHeader">EST. TRAVEL TIME</h3>
-                            <h3 class="destination__infoItemHeader" id="planetTime"></h3>
-                        </div>
+
                     </div>
                 </div>
             </section>
         </main>
 
-        <script src="assets/js/destination.js"></script>
+        <script src="assets/js/tech.js"></script>
         <script src="assets/js/nav.js"></script>
     </body>
 </html>

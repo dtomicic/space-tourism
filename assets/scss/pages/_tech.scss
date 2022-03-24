@@ -1,0 +1,254 @@
+.tech {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &Heading {
+            font-family: $subHeaderFont;
+            font-weight: 400;
+            font-size: toRem(16);
+            line-height: toRem(19);
+            letter-spacing: toRem(2.7);
+            color: $mainColor;
+            
+            &Accented {
+                opacity: 0.25;
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &Picture {
+            margin-top: toRem(32);
+
+            &ItemPortrait {
+                display: none;
+            }
+
+            &ItemLandscape {
+                width: 100%;
+            }
+        }
+
+        &Text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: toRem(34);
+            width: 100%;
+
+            &Selector {
+                display: flex;
+                gap: toRem(16);
+
+                &Item {
+                    height: toRem(40);
+                    width: toRem(40);
+                    background-color: transparent;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid gray;
+                    color: $mainColor;
+                    transition: ease-in-out 0.5s;
+
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px solid white;
+                    }
+
+                    &.activeSelector {
+                        background-color: $mainColor;
+                        color: $thirdColor;
+                    }
+
+                    &Header {
+                        font-family: $headerFont;
+                        font-weight: 400;
+                        font-size: toRem(16);
+                        line-height: toRem(18.43);
+                        letter-spacing: toRem(1);
+                    }
+                }
+            }
+
+            &Content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: toRem(26);
+                width: 100%;
+
+                &SubHeader {
+                    font-family: $subHeaderFont;
+                    font-weight: 400;
+                    font-size: toRem(14);
+                    line-height: toRem(16.8);
+                    letter-spacing: toRem(2.36);
+                    color: $secondaryColor;
+                }
+
+                &Header {
+                    margin-top: toRem(9);
+                    font-family: $headerFont;
+                    font-weight: 400;
+                    font-size: toRem(24);
+                    line-height: toRem(28);
+                    text-transform: uppercase;
+                    color: $mainColor;
+                }
+
+                &Paragraph {
+                    margin-top: toRem(16);
+                    text-align: center;
+                    font-family: $subHeaderFont;
+                    font-weight: 400;
+                    font-size: toRem(15);
+                    line-height: toRem(25);
+                    color: $secondaryColor;
+                    max-width: toRem(318);
+                }
+            }
+        }
+    }
+}
+
+// Media queries 
+
+@media (min-width: $breakTablet) {
+    .tech {
+        margin-top: toRem(40);
+
+        &__header {
+            justify-content: flex-start;
+            padding-left: toRem(38.5);
+
+            &Heading {
+                font-size: toRem(20);
+                line-height: toRem(24);
+                letter-spacing: toRem(3.38);
+            }
+        }
+
+        &__mainTextSelectorItem {
+            height: toRem(60);
+            width: toRem(60);
+
+            &Header {
+                font-size: toRem(24);
+                line-height: toRem(27.5);
+                letter-spacing: toRem(1.5);
+            }
+        }
+
+        &__mainTextContent {
+            margin-top: toRem(44);
+
+            &SubHeader {
+                font-size: toRem(16);
+                line-height: toRem(19.2);
+                letter-spacing: toRem(2.7);
+            }
+
+            &Header {
+                margin-top: toRem(16);
+                font-size: toRem(40);
+                line-height: toRem(45.84);
+            }
+
+            &Paragraph {
+                font-size: toRem(16);
+                line-height: toRem(28);
+                max-width: toRem(460);
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .tech {
+        margin-top: toRem(76);
+
+        &__header {
+            padding-left: toRem(166.5);
+
+            &Heading {
+                font-size: toRem(28);
+                line-height: toRem(33.6);
+                letter-spacing: toRem(4.72);
+            }
+        }
+
+        &__main {
+            flex-direction: row-reverse;
+            align-items: center;
+
+            &Picture {
+                width: 50%;
+            }
+    
+            &PictureItemLandscape {
+                display: none;
+            }
+    
+            &PictureItemPortrait {
+                display: block;
+            }
+    
+            &Text {
+                flex-direction: row;
+                align-items: flex-end;
+                gap: toRem(80);
+                padding-left: toRem(166.5);
+                width: 90%;
+                max-width: toRem(925);
+    
+                &Selector {
+                    flex-direction: column;
+                    width: 10%;
+                    gap: toRem(32);
+
+                    &Item {
+                        height: toRem(70);
+                        width: toRem(70);
+
+                        &Header {
+                            font-size: toRem(32);
+                            line-height: toRem(36.67);
+                            letter-spacing: toRem(2);
+                        }
+                    }
+                }
+    
+                &Content {
+                    width: 65%;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    &Header {
+                        font-size: toRem(56);
+                        line-height: toRem(64.18);
+                    }
+
+                    &Paragraph {
+                        font-size: toRem(18);
+                        line-height: toRem(32);
+                        text-align: left;
+                        width: 90%;
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+    }
+}

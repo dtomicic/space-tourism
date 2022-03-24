@@ -61,6 +61,10 @@
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 // Media queries 
 @media(min-width: $breakTablet) {
     .intro {
