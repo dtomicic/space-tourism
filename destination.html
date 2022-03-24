@@ -77,14 +77,14 @@
                         <h3 class="destination__header"><span class="destination__headerAccent">01</span> PICK YOUR DESTINATION</h3>
                     </div>   
 
-                    <img src="assets/img/destination/image-moon.webp" alt="Picture of a moon" class="destination__picture">
+                    <img class="destination__picture" id="planetPicture">
                 </div>
 
                 <div class="destination__bottom">  
                     <div class="destination__choice">
-                        <div class="destination__choiceItem">
+                        <div class="destination__choiceItem currentItem">
                             <a href="#" class="destination__choiceItemLink"><h3 class="destination__choiceItemLinkHeader">MOON</h3></a>
-                            <div class="destination__choiceItemLine active"></div>
+                            <div class="destination__choiceItemLine activeChoice"></div>
                         </div>
                         <div class="destination__choiceItem">
                             <a href="#" class="destination__choiceItemLink"><h3 class="destination__choiceItemLinkHeader">MARS</h3></a>
@@ -101,8 +101,8 @@
                     </div>
 
                     <div class="destination__desc">
-                        <h3 class="destination__descHeader">MOON</h3>
-                        <p class="destination__descParagraph">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                        <h3 class="destination__descHeader" id="planetHeader"></h3>
+                        <p class="destination__descParagraph" id="planetDesc"></p>
                     </div>
 
                     <div class="divider"></div>
@@ -110,17 +110,18 @@
                     <div class="destination__info">
                         <div class="destination__infoItem">
                             <h3 class="destination__infoItemSubHeader">AVG. DISTANCE</h3>
-                            <h3 class="destination__infoItemHeader">384,400 KM</h3>
+                            <h3 class="destination__infoItemHeader" id="planetDistance"></h3>
                         </div>
                         <div class="destination__infoItem">
                             <h3 class="destination__infoItemSubHeader">EST. TRAVEL TIME</h3>
-                            <h3 class="destination__infoItemHeader">3 DAYS  </h3>
+                            <h3 class="destination__infoItemHeader" id="planetTime"></h3>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
 
+        <script src="assets/js/destination.js"></script>
         <script src="assets/js/nav.js"></script>
     </body>
 </html>

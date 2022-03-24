@@ -593,7 +593,7 @@ body#destination {
   transition: ease-in-out 0.5s;
 }
 
-.destination__choiceItemLine.active {
+.destination__choiceItemLine.activeChoice {
   opacity: 1;
 }
 
@@ -618,6 +618,9 @@ body#destination {
   font-weight: 400;
   font-size: 3.5rem;
   line-height: 4.01125rem;
+  text-transform: uppercase;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
 }
 
 .destination__descParagraph {
@@ -626,7 +629,8 @@ body#destination {
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
-  max-width: 19.9375rem;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
 }
 
 .destination__info {
@@ -673,6 +677,7 @@ body#destination {
   font-size: 1.75rem;
   font-weight: 400;
   line-height: 2.00563rem;
+  text-transform: uppercase;
 }
 
 .divider {
