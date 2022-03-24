@@ -1,0 +1,278 @@
+.destination {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &Heading {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: toRem(32);
+        }
+    }
+
+    &__picture {
+        width: toRem(170);
+    }
+
+    &__header {
+        font-size: toRem(16);
+        font-family: $subHeaderFont;
+        font-weight: 400;
+        line-height: toRem(19.2);
+        letter-spacing: toRem(2.7);
+        color: $mainColor;
+
+        &Accent {
+            font-weight: 700;
+            mix-blend-mode: normal;
+            opacity: 0.25;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: toRem(26);
+        width: 85%;
+        justify-content: center;
+    }
+
+    &__choice {
+        display: flex;
+        align-items: center;
+        gap: toRem(26);
+        margin-bottom: toRem(40);
+
+
+        &Item {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(8);
+
+            &Link {
+                text-decoration: none;
+                font-family: $subHeaderFont;
+                font-size: toRem(14);
+                line-height: toRem(16.8);
+                letter-spacing: toRem(2.3625);
+                color: $mainColor;
+
+                &Header {
+                    font-weight: 400;
+                }
+            }
+
+            &Line {
+                background-color: $mainColor;
+                width: 100%;
+                height: toRem(3);
+                opacity: 0;
+                transition: ease-in-out 0.5s;
+
+                &.activeChoice {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: toRem(1);
+
+        &Header {
+            color: $mainColor;
+            font-family: $headerFont;
+            font-weight: 400;
+            font-size: toRem(56);
+            line-height: toRem(64.18);
+            text-transform: uppercase;
+            transition: ease-in-out 0.4s;
+        }
+
+        &Paragraph {
+            font-family: $subHeaderFont;
+            color: $secondaryColor;
+            font-weight: 400;
+            font-size: toRem(15);
+            line-height: toRem(25);
+
+            transition: ease-in-out 0.4s;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: toRem(32);
+
+        &Item {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(12);
+
+            &SubHeader {
+                font-family: $subHeaderFont;
+                color: $secondaryColor;
+                font-size: toRem(14);
+                line-height: toRem(16.8);
+                letter-spacing: toRem(2.36);
+                font-weight: 400;
+            }
+
+            &Header {
+                font-family: $headerFont;
+                color: $mainColor;
+                font-size: toRem(28);
+                font-weight: 400;
+                line-height: toRem(32.09);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.divider {
+    margin: toRem(32) 0;
+    width: 100%;
+    height: toRem(1);
+    background-color: #383B4B;
+}
+
+// Media queries
+
+@media(min-width: $breakTablet) {
+    .destination {
+        margin-top: toRem(40);
+
+        &__top {
+            width: 100%;
+
+            &Heading {
+                width: 100%;
+                justify-content: flex-start;
+                padding-left: toRem(38.5);
+                margin-bottom: toRem(60);
+            }
+        }
+
+        &__header {
+            font-size: toRem(20);
+            line-height: toRem(24);
+            letter-spacing: toRem(3.38);
+        }
+
+        &__picture {
+            width: toRem(300);
+        }
+
+        &__bottom {
+            margin-top: toRem(53);
+        }
+
+        &__choice {
+            margin-bottom: toRem(32);
+
+            &ItemLink {
+                font-size: toRem(16);
+                line-height: toRem(19.2);
+                letter-spacing: toRem(2.7);
+            }
+        }
+
+        &__desc {
+            gap: toRem(8);
+
+            &Header {
+                font-size: toRem(80);
+                line-height: toRem(91.68);
+            }
+
+            &Paragraph {
+                font-size: toRem(16);
+                line-height: toRem(28);
+                max-width: toRem(550);
+                width: 95%;
+            }
+        }
+
+        &__info {
+            flex-direction: row;
+            gap: toRem(100);
+        }
+        
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .destination {
+        margin-top: toRem(76);
+        flex-direction: row;
+
+        &__topHeading {
+            padding-left: toRem(166.5);
+        }
+
+        &__header {
+            font-size: toRem(28);
+            line-height: toRem(33.6);
+            letter-spacing: toRem(4.72);
+        }
+
+        &__picture {
+            width: toRem(445);
+        }
+
+        &__bottom {
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-right: toRem(163);
+            width: 50%;
+        }
+
+        &__desc {
+            align-items: flex-start;
+            text-align: left;
+            gap: toRem(14); 
+
+            &Header {
+                font-size: toRem(100);
+                line-height: toRem(114.6);
+            }
+
+            &P aragraph {
+                font-size: toRem(18);
+                line-height: toRem(32);
+            }
+        }
+
+        &__choice {
+            margin-bottom: toRem(52);
+
+            &Item:hover {
+                .destination__choiceItemLine {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &__info{
+            text-align: left;
+        }
+
+    }
+}
